@@ -1,0 +1,23 @@
+import { useState, useCallback } from 'react';
+import { HistoryEntry } from '../types';
+
+const MAX_HISTORY = 10;
+
+export function useHistory() {
+  const [history, setHistory] = useState<HistoryEntry[]>([]);
+
+  const addEntry = useCallback((value: number, _action: 'increment' | 'decrement' | 'reset') => {
+    const entry: HistoryEntry = {
+      id: crypto.randomUUID(),
+      value,
+      timestamp: Date.now(),
+    };
+    setHistory((prev) => [entry, ...prev].slice(0, MAX_HISTORY));
+  }, []);
+
+  const clearHistory = useCallback(() => {
+    setHistory([]);
+  }, []);
+
+  return { history, addEntry, clearHistory };
+}

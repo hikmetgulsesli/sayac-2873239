@@ -1,8 +1,10 @@
+export type HistoryAction = 'increment' | 'decrement' | 'reset';
+
 export interface HistoryEntry {
   id: string;
   value: number;
   timestamp: number;
-  action?: 'increment' | 'decrement' | 'reset';
+  action?: HistoryAction;
 }
 
 export interface CounterState {

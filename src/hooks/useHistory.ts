@@ -1,7 +1,5 @@
 import { useState, useCallback } from 'react';
-import { HistoryEntry } from '../types';
-
-export type HistoryAction = 'increment' | 'decrement' | 'reset';
+import { HistoryEntry, HistoryAction } from '../types';
 
 const MAX_HISTORY = 10;
 

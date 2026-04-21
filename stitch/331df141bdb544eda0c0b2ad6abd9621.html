@@ -1,0 +1,33 @@
+# Sayac-2873239 — Urun Gereksinimleri Dokumani (PRD)
+
+## 1. Genel Bakis
+Sayac-2873239, kullanicilarin sayisal degerleri artirma, azaltma ve sifirlama islemlerini gerceklestirebilecekleri interaktif bir web sayaci uygulamasidir. Uygulama tarayicida localStorage ile veri kaliciligi saglar. Son 10 degisiklik timestamp ile gosterilir. Karanlik ve acik tema desteği mevcuttur. Turkce arayuz ile yerel kullanicilara dogal ve akici bir deneyim sunar.
+
+## 2. Hedefler
+- Saya Artirma/Azaltma/Sifirlama
+- Degisiklik Gecmisi (Son 10)
+- Tema Degisimi (Light/Dark)
+- Veri Kaliciligi (localStorage)
+- WCAG 2.1 AA Erisilebilirlik
+- Mobil Uyumluluk
+
+## 3. Tech Stack Detayi
+React 18.3.1, Vite, TypeScript, Tailwind CSS, Lucide React, Inter & Space Grotesk fonts.
+
+## 4. Fonksiyonel Gereksinimler
+- Artir butonu ("Arttir", Plus icon)
+- Azalt butonu ("Azalt", Minus icon)
+- Sifirla butonu ("Sifirla", RotateCcw icon)
+- Gosterim: Space Grotesk 96px 700
+- Gecmis: Son 10 kayit, GG.AA.YYYY SS:DD:SN formatinda timestamp.
+
+## 6. UI/UX Design System (Playful)
+- Acik Tema: BG #F0F4FF, Surface #FFFFFF, Primary #6366F1
+- Karanlik Tema: BG #0F172A, Surface #1E293B, Primary #818CF8
+- Radius: 8/12/16px
+
+## 10. Ekranlar
+1. Ana Saya Ekrani (Main)
+2. Bos Gecmis Durumu (Empty State)
+3. Karanlik Tema (Dark Theme)
+4. Mobil Duzen (Responsive View)
